@@ -91,3 +91,13 @@ $ personal.unlockAccount(web3.eth.accounts[0], "yourPassword")
 ```
 
 check current block gas limit by running - eth.getBlock("latest"). If you supply more gas than this value, you will face 'Exceeds block gas limit' error
+
+
+## Start mining
+
+```bash
+# Start mining at the test network
+$ geth --testnet --datadir "~/.ethereum-testnet" --mine console 2>> ~/.ethereum-testnet.log
+# Log the results
+$ tail -f ~/.ethereum-testnet.log
+```
