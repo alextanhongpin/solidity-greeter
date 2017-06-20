@@ -98,6 +98,10 @@ check current block gas limit by running - eth.getBlock("latest"). If you supply
 ```bash
 # Start mining at the test network
 $ geth --testnet --datadir "~/.ethereum-testnet" --mine console 2>> ~/.ethereum-testnet.log
+
 # Log the results
 $ tail -f ~/.ethereum-testnet.log
+
+# Check your balance
+$ web3.fromWei(eth.getBalance(eth.coinbase), "ether")
 ```
