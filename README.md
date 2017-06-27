@@ -105,3 +105,23 @@ $ tail -f ~/.ethereum-testnet.log
 # Check your balance
 $ web3.fromWei(eth.getBalance(eth.coinbase), "ether")
 ```
+
+
+### Check your coinbase account
+
+```bash
+# Check account
+$ web3.eth.coinbase
+
+# Select the account you want to mine, e.g. account 0
+$ web3.miner.setEtherbase(web3.eth.accounts[0])
+
+# Unlock it before mining
+$ personal.unlockAccount(web3.eth.accounts[0], "yourPassword")
+
+# mine with 4 threads
+$ miner.start(4)
+
+# Check your balance
+$ web3.fromWei(eth.getBalance(eth.coinbase), "ether")
+```
